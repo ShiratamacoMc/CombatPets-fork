@@ -58,6 +58,7 @@ public class MagmaCubePet extends MagmaCube implements PetEntity {
 
     @Override
     public void playerTouch(Player entity) {
+        if (this.holder().isEmpty()) return;
         if (entity.getBukkitEntity() == this.getHolder().getOwner()) return;
 
         super.playerTouch(entity);
