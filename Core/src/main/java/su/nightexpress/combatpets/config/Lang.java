@@ -179,7 +179,7 @@ public class Lang implements LangContainer {
     public static final MessageLocale PET_DESPAWN_DEATH = LangEntry.builder("Pet.Despawn.Death").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Your Pet Died!")),
         GRAY.wrap("Revive it in your collection."),
-        Sound.ENTITY_GENERIC_DEATH
+        10, 70, Sound.ENTITY_GENERIC_DEATH
     );
 
     public static final MessageLocale PET_DESPAWN_DEFAULT = LangEntry.builder("Pet.Despawn.Default").chatMessage(
@@ -196,7 +196,7 @@ public class Lang implements LangContainer {
     public static final MessageLocale PET_CLAIM_SUCCESS = LangEntry.builder("Pet.Claim.Success").titleMessage(
         SOFT_GREEN.wrap(BOLD.wrap("Pet Claimed!")),
         GRAY.wrap("Check out your collection: " + SOFT_GREEN.wrap("/pet collection")),
-        Sound.ENTITY_PLAYER_LEVELUP
+        10, 70, Sound.ENTITY_PLAYER_LEVELUP
     );
 
     public static final MessageLocale PET_MYSTERY_EGG_HATCH = LangEntry.builder("Pet.MysteryEgg.Hatch").chatMessage(
@@ -252,13 +252,13 @@ public class Lang implements LangContainer {
     public static final MessageLocale LEVELING_LEVEL_UP = LangEntry.builder("Pet.Leveling.LevelUp").titleMessage(
         SOFT_GREEN.wrap(BOLD.wrap("Pet Level Up!")),
         GRAY.wrap(SOFT_GREEN.wrap(PET_NAME) + " is now level " + SOFT_GREEN.wrap(PET_LEVEL) + "!"),
-        Sound.ENTITY_PLAYER_LEVELUP
+        10, 70, Sound.ENTITY_PLAYER_LEVELUP
     );
 
     public static final MessageLocale LEVELING_LEVEL_DOWN = LangEntry.builder("Pet.Leveling.LevelDown").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Pet Level Down!")),
         GRAY.wrap(SOFT_RED.wrap(PET_NAME) + " is now level " + SOFT_RED.wrap(PET_LEVEL) + " :("),
-        Sound.ENTITY_BLAZE_DEATH
+        10, 70, Sound.ENTITY_BLAZE_DEATH
     );
 
     public static final MessageLocale LEVELING_XP_LOSE_DEATH = LangEntry.builder("Pet.XP.Lose.ByDeath").chatMessage(
@@ -274,55 +274,55 @@ public class Lang implements LangContainer {
     public static final MessageLocale PET_RENAME_PROMPT = LangEntry.builder("Pet.Rename.Prompt").titleMessage(
         SOFT_YELLOW.wrap(BOLD.wrap("Renaming")),
         GRAY.wrap("Enter new pet name."),
-        Sound.BLOCK_LAVA_POP
+        10, 70, Sound.BLOCK_LAVA_POP
     );
 
     public static final MessageLocale PET_RENAME_ERROR_NO_NAMETAG = LangEntry.builder("Pet.Rename.Error.NoNametag").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Unable to Rename!")),
         GRAY.wrap("You need a " + SOFT_RED.wrap("Name Tag") + " item."),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_RENAME_ERROR_TOO_LONG = LangEntry.builder("Pet.Rename.Error.TooLong").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Name Too Long!")),
         GRAY.wrap("Max name length is " + SOFT_RED.wrap(GENERIC_AMOUNT) + " characters!"),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_RENAME_ERROR_TOO_SHORT = LangEntry.builder("Pet.Rename.Error.TooShort").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Name Too Short!")),
         GRAY.wrap("Min name length is " + SOFT_RED.wrap(GENERIC_AMOUNT) + " characters!"),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_RENAME_ERROR_FORBIDDEN = LangEntry.builder("Pet.Rename.Error.Forbidden").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Unacceptable Name!")),
         GRAY.wrap("Name contains " + SOFT_RED.wrap("forbidden") + " characters!"),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_RENAME_SUCCESS = LangEntry.builder("Pet.Rename.Success").titleMessage(
         SOFT_GREEN.wrap(BOLD.wrap("Pet Renamed!")),
         GRAY.wrap("You renamed your pet to " + SOFT_GREEN.wrap(PET_NAME)),
-        Sound.BLOCK_NOTE_BLOCK_BELL
+        10, 70, Sound.BLOCK_NOTE_BLOCK_BELL
     );
 
     public static final MessageLocale PET_REVIVE_ERROR_NOT_ENOUGH_FUNDS = LangEntry.builder("Pet.Revive.Error.NotEnoughFunds").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Not Enough Funds!")),
         GRAY.wrap("You need " + SOFT_RED.wrap(GENERIC_AMOUNT) + " to revive " + SOFT_RED.wrap(PET_NAME) + "."),
-        Sound.BLOCK_ANVIL_PLACE
+        10, 70, Sound.BLOCK_ANVIL_PLACE
     );
 
     public static final MessageLocale PET_REVIVE_SUCCESS = LangEntry.builder("Pet.Revive.Success").titleMessage(
         SOFT_GREEN.wrap(BOLD.wrap("Pet Revived!")),
         GRAY.wrap("You revived " + SOFT_GREEN.wrap(PET_NAME) + " for " + SOFT_GREEN.wrap(GENERIC_AMOUNT) + "."),
-        Sound.ITEM_TOTEM_USE
+        10, 70, Sound.ITEM_TOTEM_USE
     );
 
     public static final MessageLocale PET_ERROR_NO_ACTIVE_PET = LangEntry.builder("Pet.Error.NoActivePet").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("No Active Pet!")),
         GRAY.wrap("You have to summon a pet to do that."),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_ERROR_NOT_YOUR = LangEntry.builder("Pet.Error.NotYour").chatMessage(
@@ -333,19 +333,19 @@ public class Lang implements LangContainer {
     public static final MessageLocale PET_SPAWN_ERROR_DEAD = LangEntry.builder("Pet.Spawn.Error.Dead").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Pet is Dead!")),
         GRAY.wrap("You have to revive it before summon!"),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_SPAWN_ERROR_ALREADY = LangEntry.builder("Pet.Spawn.Error.Already").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Already Summoned!")),
         GRAY.wrap("You can have only one summoned pet."),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_SPAWN_ERROR_BAD_PLACE = LangEntry.builder("Pet.Spawn.Error.BadPlace").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Bad Place!")),
         GRAY.wrap("There is not enough space for a pet."),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale PET_ERROR_BAD_WORLD = LangEntry.builder("Pet.Error.BadWorld").chatMessage(
@@ -379,13 +379,13 @@ public class Lang implements LangContainer {
     public static final MessageLocale SHOP_PURCHASE_ERROR_NOT_ENOUGH_FUNDS = LangEntry.builder("Shop.Purchase.Error.NotEnoughFunds").titleMessage(
         SOFT_RED.wrap(BOLD.wrap("Not Enough Funds!")),
         GRAY.wrap("You need " + SOFT_RED.wrap(GENERIC_PRICE) + " to purchase " + SOFT_RED.wrap(TEMPLATE_DEFAULT_NAME) + "."),
-        Sound.ENTITY_VILLAGER_NO
+        10, 70, Sound.ENTITY_VILLAGER_NO
     );
 
     public static final MessageLocale SHOP_PURCHASE_SUCCESS = LangEntry.builder("Shop.Purchase.Success").titleMessage(
         SOFT_GREEN.wrap(BOLD.wrap("Successful Purchase!")),
         GRAY.wrap("You bought " + SOFT_GREEN.wrap(TEMPLATE_DEFAULT_NAME) + " egg for " + SOFT_GREEN.wrap(GENERIC_PRICE) + "."),
-        Sound.BLOCK_NOTE_BLOCK_BELL
+        10, 70, Sound.BLOCK_NOTE_BLOCK_BELL
     );
 
 

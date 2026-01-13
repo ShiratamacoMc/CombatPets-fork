@@ -1,5 +1,6 @@
 package su.nightexpress.combatpets;
 
+import org.bstats.bukkit.Metrics;
 import org.jetbrains.annotations.NotNull;
 import su.nightexpress.combatpets.capture.CaptureManager;
 import su.nightexpress.combatpets.capture.command.CaptureCommands;
@@ -17,6 +18,7 @@ import su.nightexpress.combatpets.level.LevelingManager;
 import su.nightexpress.combatpets.level.command.LevelingCommands;
 import su.nightexpress.combatpets.nms.PetNMS;
 import su.nightexpress.combatpets.nms.mc_1_21_10.MC_1_21_10;
+import su.nightexpress.combatpets.nms.mc_1_21_11.MC_1_21_11;
 import su.nightexpress.combatpets.nms.mc_1_21_3.MC_1_21_4;
 import su.nightexpress.combatpets.nms.mc_1_21_5.MC_1_21_5;
 import su.nightexpress.combatpets.nms.mc_1_21_8.MC_1_21_8;
@@ -77,7 +79,11 @@ public class PetsPlugin extends NightPlugin {
 
         Keys.load(this);
 
-
+        // Initialize bStats Metrics
+        // Plugin ID: 28829 (https://bstats.org/plugin/bukkit/CombatPets/28829)
+        int pluginId = 28829;
+        Metrics metrics = new Metrics(this, pluginId);
+        this.info("bStats metrics initialized successfully!");
 
         this.dataHandler = new DataHandler(this);
         this.dataHandler.setup();
@@ -165,6 +171,7 @@ public class PetsPlugin extends NightPlugin {
             case MC_1_21_5 -> this.petNMS = new MC_1_21_5();
             case MC_1_21_8 -> this.petNMS = new MC_1_21_8();
             case MC_1_21_10 -> this.petNMS = new MC_1_21_10();
+            case MC_1_21_11 -> this.petNMS = new MC_1_21_11();
         }
         return this.petNMS != null;
     }

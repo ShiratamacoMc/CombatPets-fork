@@ -1,4 +1,43 @@
+# IDE
 /.idea/
-**/pom.xml.versionsBackup
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.classpath
+.project
+
+# Maven
 **/target/
 !src/**/target/
+**/pom.xml.versionsBackup
+**/dependency-reduced-pom.xml
+**/.flattened-pom.xml
+
+# Build artifacts
+*.jar
+*.war
+*.ear
+*.class
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Gradle (如果有使用)
+.gradle/
+**/build/
+!src/**/build/
+
+# 参考代码
+参考代码/
+
+# 临时文件
+*.tmp
+*.bak
+*.orig

@@ -5,7 +5,7 @@
     <parent>
         <artifactId>CombatPets</artifactId>
         <groupId>su.nightexpress.combatpets</groupId>
-        <version>2.7.2</version>
+        <version>3.0.0-fork</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,6 +21,11 @@
         <repository>
             <id>papermc</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+
+        <repository>
+            <id>Central Sonatype</id>
+            <url>https://central.sonatype.com/</url>
         </repository>
 
         <repository>
@@ -52,57 +57,76 @@
         <dependency>
             <groupId>su.nightexpress.combatpets</groupId>
             <artifactId>API</artifactId>
-            <version>2.7.2</version>
+            <version>3.0.0-fork</version>
         </dependency>
 
         <dependency>
             <groupId>su.nightexpress.combatpets</groupId>
             <artifactId>NMS</artifactId>
-            <version>2.7.2</version>
+            <version>3.0.0-fork</version>
+        </dependency>
+
+        <dependency>
+            <groupId>su.nightexpress.combatpets</groupId>
+            <artifactId>MC_1_21_11</artifactId>
+            <version>3.0.0-fork</version>
         </dependency>
 
         <dependency>
             <groupId>su.nightexpress.combatpets</groupId>
             <artifactId>MC_1_21_10</artifactId>
-            <version>2.7.2</version>
+            <version>3.0.0-fork</version>
         </dependency>
 
         <dependency>
             <groupId>su.nightexpress.combatpets</groupId>
             <artifactId>MC_1_21_8</artifactId>
-            <version>2.7.2</version>
+            <version>3.0.0-fork</version>
         </dependency>
 
         <dependency>
             <groupId>su.nightexpress.combatpets</groupId>
             <artifactId>MC_1_21_5</artifactId>
-            <version>2.7.2</version>
+            <version>3.0.0-fork</version>
         </dependency>
 
         <dependency>
             <groupId>su.nightexpress.combatpets</groupId>
             <artifactId>MC_1_21_4</artifactId>
-            <version>2.7.2</version>
+            <version>3.0.0-fork</version>
+        </dependency>
+
+        <!-- bStats Metrics -->
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.1.0</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>com.magmaguy.freeminecraftmodels</groupId>
             <artifactId>FreeMinecraftModels</artifactId>
             <version>1.1.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/FreeMinecraftModels.jar</systemPath>
         </dependency>
 
+        <!-- Source: https://mvnrepository.com/artifact/io.lumine/Mythic-Dist -->
         <dependency>
             <groupId>io.lumine</groupId>
             <artifactId>Mythic-Dist</artifactId>
-            <version>5.0.1-SNAPSHOT</version>
+            <version>5.9.5</version>
             <scope>provided</scope>
         </dependency>
 
         <!-- broken repo, i dont care, will use local jar -->
         <dependency>
-            <groupId>io.github.arcaneplugins.levelledmobs</groupId>
-            <artifactId>LevelledMobs</artifactId>
-            <version>4.1.1</version>
+            <groupId>io.github.arcaneplugins</groupId>
+            <artifactId>LevelledMobs-plugin</artifactId>
+            <version>4.5.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/LevelledMobs-4.5.0 b141.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -118,7 +142,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.5.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -130,8 +154,15 @@
                             <artifactSet>
                                 <includes>
                                     <include>su.nightexpress.combatpets:*</include>
+                                    <include>org.bstats:*</include>
                                 </includes>
                             </artifactSet>
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.bstats</pattern>
+                                    <shadedPattern>su.nightexpress.combatpets.libs.bstats</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
